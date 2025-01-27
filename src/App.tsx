@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from './store/store';
 import { fetchProducts, filterProducts, loadAllProducts } from './features/products/productsSlice';
