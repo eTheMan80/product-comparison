@@ -60,12 +60,8 @@ const App: React.FC = () => {
             <option data-testid="price" value="price">Sort by Price</option>
             <option data-testid="rating" value="rating">Sort by Rating</option>
           </select>
-          {selectedProducts.length > 0 && (
-            <>
-            <button data-testid="filter-btn" className="border border-gray-600 rounded cursor-pointer p-2 bg-transparent text-base text-gray-800" onClick={compareProducts}>Filter products</button>
-            <button data-testid="reset-btn" className="border border-gray-600 rounded cursor-pointer p-2 bg-transparent text-base text-gray-800" onClick={fetchAllProducts}>Load all products</button>
-            </>
-          )}
+          <button data-testid="filter-btn" className="border border-gray-600 rounded cursor-pointer p-2 bg-transparent text-base text-gray-800" onClick={compareProducts} disabled={selectedProducts.length === 0}>Filter products</button>
+            <button data-testid="reset-btn" className="border border-gray-600 rounded cursor-pointer p-2 bg-transparent text-base text-gray-800" onClick={fetchAllProducts} disabled={selectedProducts.length === 0}>Load all products</button>
         </div>
       </header>
       <main>
